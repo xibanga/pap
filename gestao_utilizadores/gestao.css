@@ -1,0 +1,293 @@
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Container Principal */
+.container {
+    margin-top: 20px;
+    max-width: 1500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #000000, -5px -5px 15px #323232;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Seção da Tabela */
+.table-section {
+    flex: 1;
+    padding: 2rem;
+    background: linear-gradient(145deg, #1e1e1e, #292929);
+    /* Cor acinzentada */
+    text-align: left;
+    color: #ffffff;
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* Estilo do Título */
+.table-section h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0px 2px 5px #000;
+}
+
+/* Estilo da Tabela */
+table {
+    width: auto;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+table th {
+    background: #007BFF;
+    /* Azul principal */
+    color: white;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background: #292929;
+}
+
+table tr:hover {
+    background: #333333;
+}
+
+/* Campos de Entrada */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 87%;
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+/* Botões */
+button {
+    align-items: center;
+    display: flex;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    /* Azul principal */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Mensagem de erro */
+p {
+    margin-top: 20px;
+    font-size: 1em;
+    color: red;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilo para o pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden; /* Oculto por padrão */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.popup.active {
+    visibility: visible; /* Torna visível quando ativo */
+    opacity: 1;
+}
+
+.popup-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.popup-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.popup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-button.yes {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+}
+
+.popup-button.yes:hover {
+    background-color: #d32f2f; /* Vermelho escuro */
+}
+
+.popup-button.no {
+    background-color: #4caf50; /* Verde */
+    color: white;
+}
+
+.popup-button.no:hover {
+    background-color: #388e3c; /* Verde escuro */
+}
+
+.carrossel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev { left: 0; }
+button.next { right: 0; }
+
+canvas {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+}
+
+/* Estilo da Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.pagination a:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.pagination .active {
+    background-color: red;
+    font-weight: bold;
+}
+
+
+
+

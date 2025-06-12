@@ -1,0 +1,190 @@
+/* Estilo Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.navbar {
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    position: fixed;
+    width: 98%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+
+
+/* Container Principal */
+.container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background: linear-gradient(145deg, #1e1e1e, #292929);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(145deg, #1e1e1e, #292929);
+    border-bottom: 2px solid #444;
+}
+
+.logo {
+    height: 50px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Mesma cor dos botões do formulário */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Efeito hover */
+}
+
+
+/* Lado Esquerdo - Foto de Perfil */
+.profile-section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    margin-right: 20px;
+    background: linear-gradient(135deg, #3a3a3a, #232323);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Nome do Utilizador */
+.profile-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* Email do Utilizador */
+.profile-card p {
+    font-size: 0.9rem;
+    color: #bbb;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+
+/* Estilizando a Foto */
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+
+/* Formulário de Upload */
+.profile-card input[type="file"] {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Botão de Upload */
+.profile-card button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(145deg, #0a196e, #1a1672);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0px 1px 3px #000;
+    box-shadow: 2px 2px 5px #1a1a1a, -2px -2px 5px #3a3a3a;
+    transition: transform 0.3s ease, box-shadow
+}
+
+.profile-card button:hover {
+    background: #5a9adb;
+}
+
+/* Lado Direito - Formulário */
+.details-section {
+    flex: 2;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #3a3a3a, #232323);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Título */
+.details-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+.info {
+    margin-bottom: 15px;
+}
+
+.info label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Botão de Gravar */
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(145deg, #0a196e, #1a1672);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0px 1px 3px #000;
+    box-shadow: 2px 2px 5px #1a1a1a, -2px -2px 5px #3a3a3a;
+    transition: transform 0.3s ease, box-shadow
+}
+
+button:hover {
+    background: #5a9adb;
+}
+

@@ -1,0 +1,122 @@
+/* Estilo geral do corpo */
+body {
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background: transparent;
+    box-shadow: 5px 5px 15px #000000, -5px -5px 15px #323232;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Imagem à esquerda */
+.image-section {
+    flex: 1;
+    background: url('rodapedaleira2.png') no-repeat center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Formulário à direita */
+.form-section {
+    flex: 1.5;
+    padding: 2rem;
+    background: linear-gradient(145deg, #1e1e1e, #292929);
+}
+
+/* Títulos */
+.form-section h2 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0px 2px 5px #000;
+}
+
+/* Estilo geral de inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+    width: 95%;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: inset 2px 2px 5px #1a1a1a, inset -2px -2px 5px #3a3a3a;
+    transition: all 0.3s ease;
+}
+
+/* Inputs com hover */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px #0a196e, 0 0 12px #1a1672;
+    background: #333333;
+}
+
+/* Campos lado a lado */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Inputs dentro de pares */
+.form-row input {
+    flex: 1;
+}
+
+/* Botão de registro */
+button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #0a196e, #1a1672);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #1a1a1a, -2px -2px 5px #3a3a3a;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #0a196e, 0px 0px 20px #1a1672;
+}
+
+/* Inputs de rádio (gênero) */
+input[type="radio"] {
+    margin-right: 0.5rem;
+    accent-color: #0a196e;
+}
+
+/* Rótulos */
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #e0e0e0;
+}

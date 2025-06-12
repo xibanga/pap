@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    margin: 0;
+    padding: 0;
+    color: black;
+}   
+
+.direita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    margin-left: 10px;
+    height: 50px;
+
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(145deg, #0a196e, #1a1672);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0px 1px 3px #000;
+    box-shadow: 2px 2px 5px #1a1a1a, -2px -2px 5px #3a3a3a;
+    transition: transform 0.3s ease, box-shadow
+}
+
+
+
+
+
+/* tabela */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(145deg, #0a196e, #1a1672);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0px 1px 3px #000;
+    box-shadow: 2px 2px 5px #1a1a1a, -2px -2px 5px #3a3a3a;
+    transition: transform 0.3s ease, box-shadow
+}
+
+
+/* Estilização da tabela */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: linear-gradient(145deg, #0a196e, #1a1672);
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}

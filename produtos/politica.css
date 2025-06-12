@@ -1,0 +1,128 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header/Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 10px 20px;
+    opacity: 0.9;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Conteúdo Principal */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container p,
+.container ul,
+.container ol {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.container h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.container ul,
+.container ol {
+    margin-left: 20px;
+}
+
+.container ul li,
+.container ol li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+    flex-basis: 30%;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo de ícones */
+.icon {
+    margin-right: 5px;
+}

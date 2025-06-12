@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.resumo-carrinho {
+    margin-bottom: 20px;
+}
+
+.resumo-carrinho h2 {
+    color: #333;
+}
+
+.resumo-carrinho ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resumo-carrinho ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.resumo-carrinho ul li img {
+    border-radius: 5px;
+}
+
+.resumo-carrinho p {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.escolha-pagamento {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.escolha-pagamento button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.escolha-pagamento button:hover {
+    background: #555;
+}
+
+.formulario-pagamento h2 {
+    color: #333;
+}
+
+.formulario-pagamento form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-pagamento form label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.formulario-pagamento form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.formulario-pagamento form button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-pagamento form button:hover {
+    background: #555;
+}
+
+.cartao-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.form-cartao {
+    flex: 1;
+    max-width: 50%;
+}
+
+.form-cartao label, .form-cartao input, .form-cartao button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.imagem-cartao {
+    flex: 1;
+    text-align: center;
+}
+
+.imagem-cartao img {
+    max-width: 330px; /* Aumentar o tamanho da imagem */
+    height: auto;
+}
+
+.cartao-container, .mbway-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-cartao, .form-mbway {
+    flex: 1;
+    max-width: 50%;
+}
+
+.form-cartao label, .form-cartao input, .form-cartao button,
+.form-mbway label, .form-mbway input, .form-mbway button {
+    display: block;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.imagem-cartao, .imagem-mbway {
+    flex: 1;
+    text-align: center;
+}
+
+.imagem-cartao img, .imagem-mbway img {
+    max-width: 600px; /* Aumentar o tamanho da imagem */
+    height: auto;
+}
+
+.envio {
+    margin-bottom: 20px;
+}
+
+.button-envio {
+    background: #333;
+    color: white;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-envio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.opcoes-envio {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.opcoes-envio h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.opcoes-envio p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.logo-envio {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.popup-content .btn-fechar {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-content .btn-fechar:hover {
+    background-color: #d32f2f;
+}
+
+
+
+/* Footer */
+footer {
+    opacity: 0.8;
+    margin-top: auto;
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.payment-methods img {
+    width: 80px;
+}

@@ -1,0 +1,232 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de adicionar aos favoritos */
+.adicionar-favoritos {
+    border: none;
+    background-color: transparent;
+}
+
+.adicionar-favoritos:hover {
+    text-decoration: underline;
+    background: transparent;
+}
+
+.logo img {
+    margin-left: auto;
+    height: 40px;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-buttons a {
+    margin-left: 20px;
+}
+
+/* Container principal */
+.produto-detalhado {
+    display: flex;
+    max-width: 1200px;
+    height: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem principal */
+.produto-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.imagem-principal {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Miniaturas */
+.miniaturas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.miniaturas img,
+.miniaturas video {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.1);
+}
+
+/* Informações do produto */
+.produto-info {
+    flex: 1;
+    padding-left: 40px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Opções */
+.opcoes {
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.cores {
+    display: flex;
+    gap: 10px;
+}
+
+.cor {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #ddd;
+}
+
+.tamanhos {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+.tamanhos button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.tamanhos button.selected {
+    background-color: black;
+    color: white;
+}
+
+.tamanho {
+    padding: 10px 18px;
+    border: 2px solid #000;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.tamanho:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Botão principal */
+.adicionar-carrinho {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.adicionar-carrinho:hover {
+    background: #000;
+}
+
+/* Informações adicionais */
+.entrega,
+.guardar {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.entrega a,
+.guardar a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.entrega a:hover,
+.guardar a:hover {
+    text-decoration: underline;
+}
+
+/* AVALIAÇÃO */
+.avaliacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.estrela {
+    font-size: 30px;
+    color: gold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.estrela.ativa {
+    color: gold;
+}

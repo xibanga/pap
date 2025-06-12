@@ -1,0 +1,129 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corpo da Página */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header a {
+    text-decoration: none;
+    background-color: #860909;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+header a:hover {
+    background-color: #b22222;
+    transform: scale(1.05);
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* Cartões das Bicicletas Favoritas */
+.bike-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.bike-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagens das Bicicletas */
+.bike-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 7px;
+    transition: transform 0.3s ease;
+}
+
+.bike-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Nome e Preço da Bicicleta */
+.bike-card h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.bike-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Botão de Remover dos Favoritos */
+.bike-card a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.bike-card a:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/* Ícone de Favorito */
+.favorite-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.favorite-icon:hover {
+    transform: scale(1.2);
+}
+
+

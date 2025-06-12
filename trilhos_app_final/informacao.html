@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Roda Pedaleira</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/rodapedaleira2.png">
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+            <a href="../paginas/pagina1.php"><img src="../imagens/rodapedaleira2.png" alt="Logo"></a>
+    </header>
+
+
+
+    <!-- Main Content -->
+    <main>
+
+
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="../imagens/rp.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp4.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp100.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp2.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp3.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp4.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp2.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp100.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp3.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp4.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp100.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp2.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp3.jpg" alt="cartaz 2024">
+                <img src="../imagens/rp4.jpg" alt="cartaz 2024">
+
+
+            </div>
+            <button class="carousel-prev">&#10094;</button>
+            <button class="carousel-next">&#10095;</button>
+        </div>
+        </section>
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <h2>EIRAS SINGLE TRACK</h2>
+            <iframe src="../imagens/single.mp4" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <!-- Botão para abrir o Chatbot -->
+        <button class="chat-toggle" onclick="toggleChat()">
+            ❓
+        </button>
+
+
+        <!-- Chatbot -->
+        <div class="chat-box" id="chatbox">
+            <div class="chat-header">
+                <img src="../imagens/rodapedaleira.jpg" alt="Logo" class="chat-logo">
+                <button class="chat-close" onclick="toggleChat()">❌</button>
+            </div>
+
+            <div class="chat-messages">
+
+                <br>
+                <br>
+
+                <div class="bot-message">Perguntas Mais Frequentes.</div>
+
+                <div class="options">
+                    <button class="chat-option" onclick="botResponse('O que é a Roda Pedaleira?')">🚴‍♂️
+                        O que é a Roda Pedaleira?
+                    </button>
+
+
+                    <button class="chat-option"
+                        onclick="botResponse('Todos os trilhos são de livre e fácil acesso?')"> 👤
+                        Todos os trilhos são de livre e fácil acesso?
+                    </button>
+
+
+                    <button class="chat-option"
+                        onclick="botResponse('Onde ficam localizados os trilhos ?')">📍
+                        Onde ficam localizados os trilhos ?
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Digital Flyer Section -->
+        <div class="flyer">
+            <img src="../imagens/rodapedaleira.png" alt="Ciclaveiro">
+            <h2>Conheça os nossos trilhos</h2>
+            <h3>Os trilhos da Roda Pedaleira, abertos há mais de 20 anos, são single tracks técnicos e divertidos,
+                distribuídos por Eiras, Brasfemes e Souselas. <br> <br>
+                Estão sinalizados para segurança e acessíveis a todos os tipos de bicicleta e níveis de experiência.
+            </h3>
+            <a href="index.php" class="button">Regressar</a>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Roda Pedaleira</h3>
+                <a href="sobrenos/sobrenos.html">A nossa Equipa</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="icon">📍</i> <a href="https://maps.app.goo.gl/xzcDq5eb2nb1xgcQA">Eiras, Coimbra,
+                        Portugal</a></p>
+                <p><i class="icon">📞</i> (+351) 914 928 796</p>
+                <p><i class="icon">📧</i> <a href="mailto:rodapedaleirapap.com">rodapedaleirapap.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="http://localhost/PAP/codigos/registo/termos/termos.html" color="white">Termos e
+                            Condições</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function botResponse(question) {
+            let chatMessages = document.querySelector(".chat-messages");
+            let userMessage = `<div class="user-message">👤 ${question}</div>`;
+            let botReply = "";
+
+            if (question.includes("O que é a Roda Pedaleira?")) {
+                botReply = `<div class="bot-message">🚴‍♂️ A Roda Pedaleira é uma associação de BTT, que procura despertar o interesse pelo mundo aventureiro nas pessoas.</div>`;
+            }
+
+            else if (question.includes("Todos os trilhos são de livre e fácil acesso?")) {
+                botReply = `<div class="bot-message">🔄  Sim, todos os trilhos sao acessiveis a toda a gente, seja por mota, bicileta ou mesmo a pé . </div>`;
+
+            } else if (question.includes("Onde ficam localizados os trilhos ?")) {
+                botReply = `<div class="bot-message">📍 Os trilhos da Roda Pedaleira, estão espalhados por Brasfemes, Souselas e Eiras! </a></div>`;
+            } 
+
+
+            chatMessages.innerHTML += userMessage + botReply;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function toggleChat() {
+            let chatbox = document.getElementById("chatbox");
+            chatbox.classList.toggle("open");
+        }
+
+
+        function toggleChat() {
+            let chatbox = document.getElementById("chatbox");
+            chatbox.classList.toggle("open");
+
+            // Alterna o botão quando a chatbox é aberta ou fechada
+            let chatButton = document.querySelector(".chat-toggle");
+            if (chatbox.classList.contains("open")) {
+                chatButton.innerHTML = "❌"; // Ícone de fechar
+            } else {
+                chatButton.innerHTML = "💬"; // Ícone de chat
+            }
+        }
+    </script>
+
+
+    <script src="../eventos/desportivos/carousel.js"></script>
+
+
+</body>
+
+</html>

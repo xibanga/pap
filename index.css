@@ -1,0 +1,437 @@
+/* Estilo geral */
+/* Corpo da Página */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+.foto {
+    display: none; /* Esconde o elemento de vídeo de fundo */
+}
+
+
+div[id='sem-registo'] {
+    margin-top: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:transparent; /* Fundo semi-transparente */
+    padding: 1rem 2rem;
+    color: #fff;
+    position: relative;
+    z-index: 2; /* Sobrepõe ao vídeo */
+}
+
+.navbar .logo {
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links .dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    list-style: none;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 0.5rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.fade-out {
+    font-size: 2rem;
+    color: #ffa726;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    transition: opacity 1s ease-out, visibility 1s ease-out; /* Suaviza opacidade e visibilidade */
+    opacity: 1; /* O elemento começa visível */
+}
+
+.hidden {
+    opacity: 0; /* Suaviza até ficar invisível */
+    visibility: hidden; /* Remove do layout após o fade */
+}
+
+/* Conteúdo principal */
+main {
+    text-align: center;
+    padding: 0rem 1rem;
+    position: relative;
+    z-index: 2;
+    height: 600px;
+
+}
+
+main h1 {
+    font-size: 2rem;
+    color: #ffa726;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+main p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+footer .footer-content {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+footer .footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+footer .footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+footer .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-section a:hover {
+    color: #ff6600;
+}
+
+@media screen and (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .news-item {
+        width: 100%;
+    }
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;  /* Esconde qualquer imagem que ultrapasse os limites */
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;  /* A largura do carrossel será 100% da tela */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;  /* A largura de cada imagem ocupa 100% do carrossel */
+    height: 200px;  /* A altura será fixa */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Botões de navegação */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+
+
+/* Área Principal */
+main {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    flex: 1;
+    /* Faz com que o conteúdo principal ocupe o espaço disponível */
+}
+
+.video-section {
+    margin: 20px;
+    width: 60%;
+    margin-left: -600px;
+    max-width: 800px;
+}
+
+.video-section iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.news-section {
+    color: black;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+
+/* Panfleto Digital */
+.flyer {
+    margin-top: -470px;
+    margin-left: 900px;
+    border-radius: 10px;
+    top: 20%;
+    right: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(1, 1, 1, 1);
+    width: 400px;
+    text-align: center;
+}
+
+.flyer h3 {
+    margin-bottom: 20px;
+}
+
+
+
+
+.button {
+    background: linear-gradient(145deg, #0a196e, #1a1672);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(145deg, rgb(255, 255, 255), rgb(0, 0, 0));
+}
+
+header {
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    max-width: 100px;
+}
+
+ /* Chatbot */
+ .chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.chat-box.open {
+    transform: scale(1);
+}
+
+.chat-header {
+    background: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.chat-logo {
+    position: overlay;
+    margin-left: 120px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+}
+
+
+
+.chat-close {
+    margin-right: -300px;
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.chat-option {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Botão Flutuante do Chat */
+.chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.chat-toggle:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Botão de Fechar */
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.close-chat:hover {
+    color: #ccc;
+}
+
+/* Animação para Abrir e Fechar */
+.chat-box.open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+}
+

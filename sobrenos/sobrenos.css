@@ -1,0 +1,110 @@
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    color: #ffffff;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 5% auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #000000, -5px -5px 15px #323232;
+}
+
+/* Seção da Imagem */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Mesma cor do fundo */
+    padding: 20px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Seção do Texto */
+.text-section {
+    flex: 1;
+    padding: 2rem;
+    background: linear-gradient(145deg, #1e1e1e, #292929); /* Cor acinzentada */
+    text-align: left;
+    color: #ffffff;
+}
+
+.text-section h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0px 2px 5px #000;
+}
+
+.text-section h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 0px 2px 5px #000;
+}
+
+.text-section p,
+.text-section ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.text-section ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+.text-section a {
+    color: #a8d5e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.text-section a:hover {
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(145deg, #1c1c3c, #29294a);
+    padding: 20px;
+    text-align: center;
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: #a8d5e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+

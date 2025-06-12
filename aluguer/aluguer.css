@@ -1,0 +1,463 @@
+/* Importação de Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Configuração Geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Ícone de Favoritos na Navbar */
+.favoritos-container {
+    position: relative;
+    display: inline-block;
+}
+
+.favoritos-link {
+    font-size: 24px;
+    color: red;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.favoritos-link:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown de Favoritos */
+.dropdown-favoritos {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    z-index: 10;
+}
+
+.dropdown-favoritos ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown-favoritos ul li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown-favoritos ul li:last-child {
+    border-bottom: none;
+}
+
+/* Exibir dropdown quando passar o mouse */
+.favoritos-container:hover .dropdown-favoritos {
+    display: block;
+}
+
+
+.logo img {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.direita {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botão Admin */
+.admin-button {
+    background-color: #d90000;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.admin-button:hover {
+    background-color: #a10000;
+    transform: scale(1.05);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #222;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Ajuste do container das bicicletas */
+.container {
+    margin-top: -420px;
+    margin-left: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas para as bicicletas */
+    gap: 30px;
+    flex-grow: 1;
+    /* Ocupará todo o espaço restante */
+    padding: 20px;
+}
+
+/* Ajuste para telas menores (responsividade) */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 coluna em telas pequenas */
+    }
+}
+
+
+/* Estilização Profissional dos Cards */
+.bike-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.bike-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagem da Bicicleta */
+.bike-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.bike-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Título da Bicicleta */
+.bike-card h2 {
+    font-size: 20px;
+    color: #222;
+    margin: 15px 0 10px;
+}
+
+/* Descrição */
+.bike-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Preço */
+.bike-card strong {
+    font-size: 18px;
+    color: #d90000;
+}
+
+/* Botão de Aluguer */
+.bike-card .rent-button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(145deg, #1a1672, #0a196e);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0px 1px 3px #000;
+    box-shadow: 2px 2px 5px #1a1a1a, -2px -2px 5px #3a3a3a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bike-card .rent-button:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 6px #0a0a0a, -3px -3px 6px #2a2a2a;
+}
+
+/* Efeito de Hover no Texto */
+.bike-card:hover h2,
+.bike-card:hover p {
+    color: #000;
+}
+
+/* Estilização da Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    padding: 12px 18px;
+    margin: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background: #333;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.pagination a:hover {
+    background-color: #a10000;
+    transform: scale(1.05);
+}
+
+.pagination .active {
+    background: red;
+    font-weight: bold;
+}
+
+/* Animação para a Página */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container,
+.bike-card,
+.pagination {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    ;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    /* Usa flexbox para alinhar os itens */
+    justify-content: space-around;
+    /* Espaço uniforme entre os elementos */
+    align-items: center;
+    /* Alinha os itens verticalmente */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Alinha o conteúdo ao topo */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-section {
+    text-align: left;
+    /* Alinha cada seção à esquerda */
+    flex: 1;
+    /* Dá o mesmo espaço para cada seção */
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #00bfff;
+}
+
+/* Alinha os ícones em contato */
+.footer-section .icon {
+    margin-right: 10px;
+}
+
+.favorite-btn {
+    text-decoration: none;
+}
+
+
+
+/* Sidebar fixa do lado esquerdo */
+.sidebar {
+    margin-top: 1px;
+    width: 250px;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    transition: left 0.4s ease-in-out;
+    z-index: 999;
+    overflow: hidden;
+}
+
+/* Sidebar Cabeçalho */
+.sidebar h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Sidebar Inputs */
+.sidebar input {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #333;
+    color: white;
+}
+
+
+.sidebar select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #333;
+    color: white;
+}
+
+/* Placeholder customizado */
+.sidebar input::placeholder {
+    color: #888;
+}
+
+/* Sidebar Botão de Filtrar */
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    top: 80px;
+    /* Mantém a sidebar fixa ao rolar */
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-shadow: 0px 1px 3px #000;
+}
+
+.sidebar button:hover {
+    background: linear-gradient(145deg, #29298a, #1a1672);
+    transform: scale(1.05);
+}
+
+/* Filtros Labels */
+.sidebar label {
+    font-size: 15px;
+    color: #ddd;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Responsividade: Sidebar fecha em telas menores */
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        display: none;
+    }
+
+    .sidebar.active {
+        display: block;
+    }
+}
+
+/* Animação para o aparecimento da Sidebar */
+@keyframes fadeInSidebar {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation: fadeInSidebar 0.5s ease-in-out;
+}
+
+.bike-card.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}

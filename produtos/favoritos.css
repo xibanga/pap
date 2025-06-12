@@ -1,0 +1,87 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo img {
+    height: 60px;
+}
+
+/* Container principal */
+.favoritos {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.favoritos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ff4081;
+}
+
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-produtos th, .tabela-produtos td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabela-produtos th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.tabela-produtos th:hover {
+    background-color: #e9e9e9;
+}
+
+.tabela-produtos td button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff4081;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tabela-produtos td button:hover {
+    background-color: #e91e63;
+}
+
+.produto-imagem {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}

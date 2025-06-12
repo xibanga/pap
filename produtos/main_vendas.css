@@ -1,0 +1,640 @@
+body {
+    background: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.mensagem {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.timeline {
+    height: 5px;
+    background-color: #4CAF50;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    animation: timeline 2s linear;
+}
+
+@keyframes timeline {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+.sidebar {
+    margin-top: 80px;
+    left: 0;
+    background: white;
+    width: 300px;
+    height: calc(100% - 80px);
+    padding: 20px;
+    overflow-y: auto;
+    display: block !important;
+    /* Mantém a sidebar sempre visível */
+}
+
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.produto {
+    cursor: pointer;
+    flex: 1 1 calc(33.33% - 20px);
+    /* Três produtos por linha */
+    max-width: calc(33.33% - 20px);
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.produto h3 {
+    margin: 10px 0;
+}
+
+.produto p {
+    margin: 5px 0;
+}
+
+.produto button {
+    width: 100%;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.produto button:hover {
+    background: #555;
+}
+
+.produto .comprar {
+    background: #4CAF50;
+}
+
+.produto .comprar:hover {
+    background: #45a049;
+}
+
+.produto .carrinho {
+    background: #f44336;
+}
+
+.produto .carrinho:hover {
+    background: #e53935;
+}
+
+.grid {
+    background: #f0f0f0;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produtos-destaque,
+.produtos-detalhados {
+    padding: 20px;
+}
+
+.produtos-destaque h2,
+.produtos-detalhados h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+
+}
+
+
+.mensagem {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.timeline {
+    height: 5px;
+    background-color: #4CAF50;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    animation: shrink 2s linear forwards;
+}
+
+@keyframes shrink {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+.direita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    /* Ajustar a largura para 100% */
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    /* Adiciona margem automática à esquerda para empurrar os botões para a direita */
+}
+
+.admin-button {
+    background-color: #860909;
+    /* Roxo */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+    background-color: #8A2BE2;
+    /* Azul mais claro que o roxo */
+}
+
+.btn-carrinho {
+    margin-left: 750px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Produtos em Destaque */
+.produtos-destaque {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #0d0d0d, #1c1c3c);
+    color: black;
+    background: #f0f0f0;
+
+}
+
+.produto {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black;
+}
+
+.produto img {
+    width: 75%;
+    aspect-ratio: 1;
+}
+
+button {
+    background: linear-gradient(145deg, #0a196e, #1a1672);
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Botão Ver Equipamentos */
+.ver-equipamentos {
+    background-color: #1a1672;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+}
+
+.ver-equipamentos:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Seção de Produtos Detalhados */
+.produto-detalhado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.produto-detalhado img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.descricao {
+    flex: 1;
+    padding: 50px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.produto-detalhado.imagem-direita .descricao {
+    margin-right: 0;
+    margin-left: 0px;
+    /* Ajuste a margem esquerda para mover a descrição mais para a direita */
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    margin-bottom: 10px;
+}
+
+.filter-group select,
+.filter-group input,
+.filter-group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the element's total width and height */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.payment-methods img {
+    width: 80px;
+}
+
+/* Botões estilizados */
+.comprar,
+.carrinho {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.comprar {
+    background: #007bff;
+    color: white;
+}
+
+.carrinho {
+    background: #333;
+    color: white;
+}
+
+/* Botões estilizados */
+.comprar1,
+.carrinho1 {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.comprar1 {
+    background: #007bff;
+    color: white;
+}
+
+.carrinho1 {
+    background: #333;
+    color: white;
+}
+
+/* Ícones de cores */
+.cores {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.cor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #ccc;
+}
+
+.branco {
+    background: white;
+}
+
+.preto {
+    background: black;
+}
+
+.amarelo {
+    background: yellow;
+}
+
+.vermelho {
+    background: red;
+}
+
+.azul {
+    background: blue;
+}
+
+
+.produto-detalhado-container {
+
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 750px;
+}
+
+.pagina {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+
+}
+
+main {
+    width: 100%;
+}
+
+/* Estilização da Sidebar */
+.sidebar {
+    background-color: transparent;
+    margin-top: 1px;
+    width: 350px;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    transition: left 0.4s ease-in-out;
+    z-index: 999;
+    color: black;
+    overflow: hidden;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: black;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Campos de Input */
+.sidebar label {
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+.sidebar input {
+    width: 93%;
+    background: #333;
+    color: white;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+.sidebar select {
+    background: #333;
+    color: white;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    font-size: 14px;
+    background: #333;
+    color: white;
+}
+
+.sidebar button:hover {
+    background: linear-gradient(145deg, #29298a, #1a1672);
+}
+
+/* Botão de Fechar */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+    }
+
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    /* Usa flexbox para alinhar os itens */
+    justify-content: space-around;
+    /* Espaço uniforme entre os elementos */
+    align-items: center;
+    /* Alinha os itens verticalmente */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Alinha o conteúdo ao topo */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-section {
+    text-align: left;
+    /* Alinha cada seção à esquerda */
+    flex: 1;
+    /* Dá o mesmo espaço para cada seção */
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #00bfff;
+}
+
+/* Alinha os ícones em contato */
+.footer-section .icon {
+    margin-right: 10px;
+}
