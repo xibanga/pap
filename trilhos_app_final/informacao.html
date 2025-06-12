@@ -15,7 +15,7 @@
 
     <!-- Navbar -->
     <header>
-            <a href="../paginas/pagina1.php"><img src="../imagens/rodapedaleira2.png" alt="Logo"></a>
+        <a href="../paginas/pagina1.php"><img src="../imagens/rodapedaleira2.png" alt="Logo"></a>
     </header>
 
 
@@ -53,9 +53,7 @@
         <!-- Video Section -->
         <div class="video-section">
             <h2>EIRAS SINGLE TRACK</h2>
-            <iframe src="../imagens/single.mp4" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            <iframe src="https://youtube.com/embed/phYpfRPBkxw?autoplay=1"></iframe>
         </div>
 
         <!-- Botão para abrir o Chatbot -->
@@ -84,14 +82,13 @@
                     </button>
 
 
-                    <button class="chat-option"
-                        onclick="botResponse('Todos os trilhos são de livre e fácil acesso?')"> 👤
+                    <button class="chat-option" onclick="botResponse('Todos os trilhos são de livre e fácil acesso?')">
+                        👤
                         Todos os trilhos são de livre e fácil acesso?
                     </button>
 
 
-                    <button class="chat-option"
-                        onclick="botResponse('Onde ficam localizados os trilhos ?')">📍
+                    <button class="chat-option" onclick="botResponse('Onde ficam localizados os trilhos ?')">📍
                         Onde ficam localizados os trilhos ?
                     </button>
 
@@ -166,7 +163,7 @@
 
             } else if (question.includes("Onde ficam localizados os trilhos ?")) {
                 botReply = `<div class="bot-message">📍 Os trilhos da Roda Pedaleira, estão espalhados por Brasfemes, Souselas e Eiras! </a></div>`;
-            } 
+            }
 
 
             chatMessages.innerHTML += userMessage + botReply;
