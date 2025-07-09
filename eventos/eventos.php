@@ -46,12 +46,18 @@ $result = mysqli_query($con, $query);
 
         <?php if (mysqli_num_rows($result) > 0): ?>
             <?php while ($evento = mysqli_fetch_assoc($result)): ?>
-                <div class="event-card">
-                    <h3><?php echo htmlspecialchars($evento['nome_evento']); ?></h3>
-                    <p><b>Data:</b> <?php echo date("d/m/Y", strtotime($evento['data_evento'])); ?></p>
-                    <p><b>Hora:</b> <?php echo date("H:i", strtotime($evento['hora'])); ?></p>
-                    <p><b>Local:</b> <?php echo htmlspecialchars($evento['localizacao']); ?></p>
-                    <p><?php echo nl2br(htmlspecialchars($evento['descricao'])); ?></p>
+                <div class="event-card" style="display: flex; justify-content: space-between;">
+                    <div>
+                        <h3><?php echo htmlspecialchars($evento['nome_evento']); ?></h3>
+                        <p><b>Data:</b> <?php echo date("d/m/Y", strtotime($evento['data_evento'])); ?></p>
+                        <p><b>Hora:</b> <?php echo date("H:i", strtotime($evento['hora'])); ?></p>
+                        <p><b>Local:</b> <?php echo htmlspecialchars($evento['localizacao']); ?></p>
+                        <p><?php echo nl2br(htmlspecialchars($evento['descricao'])); ?></p>
+                        
+                    </div>
+                    
+                    <img src="<?= '../imagens/eventos/' . $evento['imagem'] ?>" style="height: 100%; max-height: 200px; max-width: 400px" alt="Imagem do evento">
+                    
                 </div>
             <?php endwhile; ?>
         <?php else: ?>

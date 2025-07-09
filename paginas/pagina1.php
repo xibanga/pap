@@ -57,37 +57,42 @@ include('../ligabd.php'); // Conexão com o banco de dados
             <div><img src="../imagens/rodapedaleira2.png" alt="Roda Pedaleira" class="rodapedaleira2"
                     style="height: 200px; width: auto;"></div>
 
-            <div class="menu">
-
-                <!-- Informações -->
-                <a class="menu-item" href="http://localhost/PAP/sobrenos/sobrenos.html">
-                    <img src="../imagens/sobrenos.png" alt="Sobre Nós" class="icon">
-                    <p> Sobre Nós </p>
-                </a>
+            <div style="gap: 20px; display: flex; justify-content: center; flex-direction: column">
 
 
-                <a class="menu-item" href="../eventos/eventos.php">
-                    <img src="../imagens/evento.png" alt="Eventos" class="icon">
-                    <p>Eventos</p>
-                </a>
+                    <div style="display: flex; justify-content: center; gap: 20px">
+                        <!-- Informações -->
+                        <a class="menu-item" href="http://localhost/PAP/sobrenos/sobrenos.html">
+                            <img src="../imagens/sobrenos.png" alt="Sobre Nós" class="icon">
+                            <p> Sobre Nós </p>
+                        </a>
 
 
-                <!-- Diversões -->
-                <a class="menu-item vendas" href="http://localhost/PAP/trilhos_app_final/index.php">
-                    <img src="../imagens/trilho.png" alt="Trilhos" class="icon">
-                    <p>Trilhos</p>
-                </a>
+                        <a class="menu-item" href="../eventos/eventos.php">
+                            <img src="../imagens/evento.png" alt="Eventos" class="icon">
+                            <p>Eventos</p>
+                        </a>
 
-                <!-- Vendas -->
-                <a class="menu-item vendas" href="http://localhost/PAP/produtos/main_vendas.php">
-                    <img src="../imagens/merch.png" alt="Merch" class="icon">
-                    <p>Vendas</p>
-                </a>
 
-                <a class="menu-item" href="../aluguer/aluguer.php">
-                    <img src="../imagens/bike.png" alt="Bicicletas" class="icon">
-                    <p>Aluguer de Bicicletas</p>
-                </a>
+                        <!-- Diversões -->
+                        <a class="menu-item vendas" href="http://localhost/PAP/trilhos_app_final/index.php">
+                            <img src="../imagens/trilho.png" alt="Trilhos" class="icon">
+                            <p>Trilhos</p>
+                        </a>
+                    </div>
+
+                    <div style="display: flex; justify-content: center; gap: 20px">
+                        <!-- Vendas -->
+                        <a class="menu-item vendas" href="http://localhost/PAP/produtos/main_vendas.php">
+                            <img src="../imagens/merch.png" alt="Merch" class="icon">
+                            <p>Vendas</p>
+                        </a>
+
+                        <a class="menu-item vendas" href="../aluguer/aluguer.php">
+                            <img src="../imagens/bike.png" alt="Bicicletas" class="icon">
+                            <p>Aluguer de Bicicletas</p>
+                        </a>
+                    </div>
 
 
 

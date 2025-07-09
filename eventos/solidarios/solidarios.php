@@ -63,9 +63,14 @@ $result = mysqli_query($con, $query);
             
             <div class="carousel">
                 <div class="carousel-images">
-                    <img src="https://via.placeholder.com/600x400" alt="Imagem 1 de Eiras Single Track">
-                    <img src="https://via.placeholder.com/600x400" alt="Imagem 2 de Eiras Single Track">
-                    <img src="https://via.placeholder.com/600x400" alt="Imagem 3 de Eiras Single Track">
+               <img src="../../imagens/st/st.jpg" alt="cartaz 2024">
+                    <img src="../../imagens/st/st1.jpg" alt="Imagem 2 de Eiras Single Track">
+                    <img src="../../imagens/st/st1.jpg" alt="Imagem 2 de Eiras Single Track">
+                    <img src="../../imagens/st/st1.jpg" alt="Imagem 2 de Eiras Single Track">
+                    <img src="../../imagens/st/st1.jpg" alt="Imagem 2 de Eiras Single Track">
+                    <img src="../../imagens/st/st1.jpg" alt="Imagem 2 de Eiras Single Track">
+                    <img src="../../imagens/st/st1.jpg" alt="Imagem 2 de Eiras Single Track">
+                    <img src="../../imagens/st/st1.jpg" alt="Imagem 2 de Eiras Single Track">
                 </div>
                 <button class="carousel-prev">&#10094;</button>
                 <button class="carousel-next">&#10095;</button>

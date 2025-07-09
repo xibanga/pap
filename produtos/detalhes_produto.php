@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['adicionar_ao_carrinho'
             "nome" => $produtoData['nome'],
         ];
     }
-    header("Location: detalhes_produto.php?id=$produto_id");
+    header("Location: detalhes_produto.php?id=$produto_id".($_POST["cor"] ? "&cor=".$_POST["cor"] : ""));
     exit();
 }
 
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['adicionar_aos_favorito
     if (!in_array($produto_id, $_SESSION['favoritos'])) {
         $_SESSION['favoritos'][] = $produto_id;
     }
-    header("Location: detalhes_produto.php?id=$produto_id");
+    header("Location: detalhes_produto.php?id=$produto_id".($_POST["cor"] ? "&cor=".$_POST["cor"] : ""));
     exit();
 }
 
@@ -191,8 +191,9 @@ if (isset($_SESSION['favoritos']) && count($_SESSION['favoritos']) > 0) {
                 </div>
             </div>
 
-            <form method="post" action="detalhes_produto.php?id=<?php echo $produto['id']; ?>">
+            <form method="post" action="detalhes_produto.php?id=<?php echo $produto['id']; ?>&<?= $_GET["cor"] ?>">
                 <input type="hidden" name="produto_id" value="<?php echo $produto['id']; ?>">
+                <input type="hidden" name="cor" value="<?= $_GET["cor"] ?>">
                 <button type="submit" name="adicionar_ao_carrinho" class="adicionar-carrinho">Adicionar ao
                     Carrinho</button>
             </form>

@@ -61,10 +61,7 @@ session_start();
 
                 <label for="imagem">Imagem do Evento:</label>
                 <input type="file" id="imagem" name="imagem" accept="image/*" required>
-
-                <label for="criador">Criador do Evento:</label>
-                <input type="text" id="criador" name="criador" required>
-
+                
                 <button type="submit" class="submit-button">Criar Evento</button>
             </form>
         </div>

@@ -29,11 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Redirecionar para a seção correta
-    if ($tipo_evento == 'desportivo') {
-        header("Location: ../eventos/desportivos/desportivos.php");
-    } else {
-        header("Location: ../eventos/solidarios/solidarios.php");
-    }
+    header("Location: ../eventos/eventos.php");
     exit();
 }
 ?>
