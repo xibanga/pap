@@ -79,8 +79,10 @@ $total += $envio;
             <ul>
                 <?php foreach ($produtos as $produto): ?>
                     <li>
-                        <img src="../imagens/<?php echo $produto['imagem']; ?>" alt="<?php echo $produto['nome']; ?>" width="50">
-                        <span><?php echo $produto['nome']; ?></span>
+                        <div style="display: flex; align-items: center">
+                            <img src="../imagens/<?php echo $produto['categoria']; ?>/preta/frente.png" alt="<?php echo $produto['nome']; ?>" width="50">
+                            <span><?php echo $produto['nome']; ?></span>
+                        </div>
                         <span>Quantidade: <?php echo $produto['quantidade']; ?></span>
                         <span>€<?php echo number_format($produto['preco'] * $produto['quantidade'], 2); ?></span>
                     </li>

@@ -23,7 +23,7 @@ header .logo img {
 }
 
 main {
-    width: 80%;
+    width: min(95%, 600px);
     margin: auto;
     padding: 20px;
     background: white;
