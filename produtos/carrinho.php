@@ -68,6 +68,8 @@ if (isset($_POST['atualizar'])) {
                     <tr>
                         <th>Nome Produto</th>
                         <th>Preço</th>
+                        <th>Cor</th>
+                        <th>Tamanho</th>
                         <th>Quantidade</th>
                         <th>Total</th>
                         <th>Ações</th>
@@ -83,6 +85,8 @@ if (isset($_POST['atualizar'])) {
                         <tr>
                             <td><?php echo $produto['nome']; ?></td>
                             <td>€<?php echo number_format($produto['preco'], 2); ?> EUR</td>
+                            <td><?= ucfirst(strtolower($produto["cor"])) ?></td>
+                            <td><?= $produto["tamanho"] ?></td>
                             <td>
                                 <form method="post" action="carrinho.php">
                                     <input type="hidden" name="produto_id" value="<?php echo $produto['id']; ?>">

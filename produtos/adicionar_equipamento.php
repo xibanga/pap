@@ -2,6 +2,14 @@
 session_start();
 require "../ligabd.php"; // Conexão com o banco de dados
 
+function ensureFolderExists(string $path, int $permissions = 0755): bool
+{
+    if (!is_dir($path)) {
+        return mkdir($path, $permissions, true);
+    }
+    return true;
+}
+
 // Adicionar produto
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['adicionar'])) {
     $nome = $_POST['nome'];
@@ -10,18 +18,57 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['adicionar'])) {
     $categoria = $_POST['categoria'];
     $destaque = $_POST['destaque'];
     $imagem = $_FILES['imagem']['name'];
-    $target_imagem = "../imagens/" . basename($imagem);
+
+    // branca
+
+    $dir = "../imagens/" . $_POST['categoria'] . "/branca";
+    $frente = $dir . "/" . "frente.png";
+    $costas = $dir . "/" . "costas.png";
+    ensureFolderExists($dir);
+    move_uploaded_file($_FILES['branca_frente']['tmp_name'], $frente);
+    move_uploaded_file($_FILES['branca_costas']['tmp_name'], $costas);
+
+    // preta
+
+    $dir = "../imagens/" . $_POST['categoria'] . "/preta";
+    $frente = $dir . "/" . "frente.png";
+    $costas = $dir . "/" . "costas.png";
+    ensureFolderExists($dir);
+    move_uploaded_file($_FILES['preta_frente']['tmp_name'], $frente);
+    move_uploaded_file($_FILES['preta_costas']['tmp_name'], $costas);
+
+    // vermelha
+
+    $dir = "../imagens/" . $_POST['categoria'] . "/vermelha";
+    $frente = $dir . "/" . "frente.png";
+    $costas = $dir . "/" . "costas.png";
+    ensureFolderExists($dir);
+    move_uploaded_file($_FILES['vermelha_frente']['tmp_name'], $frente);
+    move_uploaded_file($_FILES['vermelha_costas']['tmp_name'], $costas);
+
+    // azul
+
+    $dir = "../imagens/" . $_POST['categoria'] . "/azul";
+    $frente = $dir . "/" . "frente.png";
+    $costas = $dir . "/" . "costas.png";
+    ensureFolderExists($dir);
+    move_uploaded_file($_FILES['azul_frente']['tmp_name'], $frente);
+    move_uploaded_file($_FILES['azul_costas']['tmp_name'], $costas);
+
+    // amarela
+
+    $dir = "../imagens/" . $_POST['categoria'] . "/amarela";
+    $frente = $dir . "/" . "frente.png";
+    $costas = $dir . "/" . "costas.png";
+    ensureFolderExists($dir);
+    move_uploaded_file($_FILES['amarela_frente']['tmp_name'], $frente);
+    move_uploaded_file($_FILES['amarela_costas']['tmp_name'], $costas);
 
     // Inserir produto no banco de dados
-    $query = "INSERT INTO produtos (nome, preco, descricao, categoria, destaque, imagem) VALUES ('$nome', '$preco', '$descricao', '$categoria', '$destaque', '$imagem')";
+    $query = "INSERT INTO produtos (nome, preco, descricao, categoria, destaque) VALUES ('$nome', '$preco', '$descricao', '$categoria', '$destaque')";
     mysqli_query($con, $query);
 
-    // Mover arquivo de imagem
-    if (move_uploaded_file($_FILES['imagem']['tmp_name'], $target_imagem)) {
-        $_SESSION['mensagem'] = "Produto adicionado com sucesso!";
-    } else {
-        $_SESSION['mensagem'] = "Falha ao adicionar produto!";
-    }
+    $_SESSION['mensagem'] = "Produto adicionado com sucesso!";
 }
 
 // Remover produto
@@ -214,29 +261,79 @@ $resultado = mysqli_query($con, $query);
                 <option value="tshirts">Tshirts</option>
             </select><br>
 
-            <label for="tamanhos">Tamanhos Disponíveis:</label>
-            <select id="tamanhos" name="tamanhos[]" multiple required>
-                <option value="XS">XS</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-            </select><br>
-
             <label for="destaque">Destaque:</label>
             <select name="destaque">
                 <option value="sim">Sim</option>
                 <option value="nao">Não</option>
             </select><br>
 
-            <label for="imagem">Imagem:</label>
-            <input type="file" id="imagem" name="imagem"><br>
 
-            <label for="miniatura1">Miniatura 1:</label>
-            <input type="file" id="miniatura1" name="miniatura1" required>
 
-            <label for="miniatura2">Miniatura 2:</label>
-            <input type="file" id="miniatura2" name="miniatura2" required>
+            <div style="width: 700px; gap: 20px; margin: 20px 0px;">
+
+                <div style="display: flex; width: 100%; justify-content: center; gap: 20px">
+                    <div>
+                        <h3>Branca</h3>
+
+                        <label for="miniatura1">Frente:</label>
+                        <input type="file" id="miniatura1" name="branca_frente" required>
+
+                        <label for="miniatura2">Costas:</label>
+                        <input type="file" id="miniatura2" name="branca_costas" required>
+                    </div>
+
+
+                    <div>
+                        <h3>Preta</h3>
+
+                        <label for="miniatura1">Frente:</label>
+                        <input type="file" id="miniatura1" name="preta_frente" required>
+
+                        <label for="miniatura2">Costas:</label>
+                        <input type="file" id="miniatura2" name="preta_costas" required>
+                    </div>
+
+                    <div>
+                        <h3>Vermelha</h3>
+
+                        <label for="miniatura1">Frente:</label>
+                        <input type="file" id="miniatura1" name="vermelha_frente" required>
+
+                        <label for="miniatura2">Costas:</label>
+                        <input type="file" id="miniatura2" name="vermelha_costas" required>
+                    </div>
+                </div>
+
+
+                <div style="display: flex; width: 100%; justify-content: center; gap: 20px">
+                    <div>
+                        <h3>Azul</h3>
+
+                        <label for="miniatura1">Frente:</label>
+                        <input type="file" id="miniatura1" name="azul_frente" required>
+
+                        <label for="miniatura2">Costas:</label>
+                        <input type="file" id="miniatura2" name="azul_costas" required>
+                    </div>
+
+                    <div>
+                        <h3>Amarela</h3>
+
+                        <label for="miniatura1">Frente:</label>
+                        <input type="file" id="miniatura1" name="amarela_frente" required>
+
+                        <label for="miniatura2">Costas:</label>
+                        <input type="file" id="miniatura2" name="amarela_costas" required>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
 
             <button type="submit" name="adicionar">Adicionar Produto</button>
         </form>
@@ -267,15 +364,8 @@ $resultado = mysqli_query($con, $query);
                         <td><?php echo $produto['descricao']; ?></td>
                         <td><?php echo $produto['categoria']; ?></td>
                         <td>
-                            <?php if ($produto['imagem']): ?>
-                                <img src="../imagens/<?php echo $produto['imagem']; ?>" alt="<?php echo $produto['nome']; ?>"
-                                    width="50">
-                            <?php elseif ($produto['video']): ?>
-                                <video width="100" controls>
-                                    <source src="../videos/<?php echo $produto['video']; ?>" type="video/mp4">
-                                    Seu navegador não suporta o elemento de vídeo.
-                                </video>
-                            <?php endif; ?>
+                            <img src="../imagens/<?= $produto['categoria']; ?>/preta/frente.png" alt="<?php echo $produto['nome']; ?>"
+                                width="50">
                         </td>
                         <td class="actions">
                             <a href="adicionar_equipamento.php?remover=<?php echo $produto['id']; ?>" class="btn-remover"

@@ -59,7 +59,7 @@ if (isset($_SESSION['favoritos']) && count($_SESSION['favoritos']) > 0) {
                 <?php if (count($favoritos) > 0): ?>
                     <?php foreach ($favoritos as $produto): ?>
                         <tr>
-                            <td><img src="../imagens/<?php echo $produto['imagem']; ?>" alt="<?php echo $produto['nome']; ?>" class="produto-imagem"></td>
+                            <td><img src="../imagens/<?php echo $produto['categoria']; ?>/preta/frente.png" alt="<?php echo $produto['nome']; ?>" class="produto-imagem"></td>
                             <td><a href="detalhes_produto.php?id=<?php echo $produto['id']; ?>"><?php echo $produto['nome']; ?></a></td>
                             <td>€<?php echo number_format($produto['preco'], 2); ?></td>
                             <td>

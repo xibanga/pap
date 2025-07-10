@@ -2,6 +2,8 @@
 session_start();
 require "../ligabd.php"; // Conexão com o banco de dados
 
+// var_dump($_SESSION["carrinho"]);
+
 // Verificar se o ID do produto foi passado como parâmetro
 
 $_GET['cor'] = $_GET['cor'] ?? 'branca';
@@ -39,9 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['adicionar_ao_carrinho'
             "quantidade" => 1,
             "preco" => $produtoData['preco'],
             "nome" => $produtoData['nome'],
+            "cor" => $_GET["cor"],
+            "tamanho" => $_POST["tamanho"],
         ];
     }
-    header("Location: detalhes_produto.php?id=$produto_id".($_POST["cor"] ? "&cor=".$_POST["cor"] : ""));
+    header("Location: detalhes_produto.php?id=$produto_id" . ($_POST["cor"] ? "&cor=" . $_POST["cor"] : ""));
     exit();
 }
 
@@ -56,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['adicionar_aos_favorito
     if (!in_array($produto_id, $_SESSION['favoritos'])) {
         $_SESSION['favoritos'][] = $produto_id;
     }
-    header("Location: detalhes_produto.php?id=$produto_id".($_POST["cor"] ? "&cor=".$_POST["cor"] : ""));
+    header("Location: detalhes_produto.php?id=$produto_id" . ($_POST["cor"] ? "&cor=" . $_POST["cor"] : ""));
     exit();
 }
 
@@ -183,22 +187,23 @@ if (isset($_SESSION['favoritos']) && count($_SESSION['favoritos']) > 0) {
 
                 <h3>Selecione um Tamanho</h3>
                 <div class="tamanhos">
-                    <button class="tamanho" onclick="selecionarTamanho(this)">XS</button>
-                    <button class="tamanho" onclick="selecionarTamanho(this)">S</button>
-                    <button class="tamanho" onclick="selecionarTamanho(this)">M</button>
-                    <button class="tamanho" onclick="selecionarTamanho(this)">L</button>
-                    <button class="tamanho" onclick="selecionarTamanho(this)">XL</button>
+                    <button class="tamanho" onclick="selecionarTamanho(this, 'XS')">XS</button>
+                    <button class="tamanho" onclick="selecionarTamanho(this, 'S')">S</button>
+                    <button class="tamanho" onclick="selecionarTamanho(this, 'M')">M</button>
+                    <button class="tamanho" onclick="selecionarTamanho(this, 'L')">L</button>
+                    <button class="tamanho" onclick="selecionarTamanho(this, 'XL')">XL</button>
                 </div>
             </div>
 
             <form method="post" action="detalhes_produto.php?id=<?php echo $produto['id']; ?>&<?= $_GET["cor"] ?>">
                 <input type="hidden" name="produto_id" value="<?php echo $produto['id']; ?>">
                 <input type="hidden" name="cor" value="<?= $_GET["cor"] ?>">
+                <input type="hidden" name="tamanho" id="form_tamanho" value="">
                 <button type="submit" name="adicionar_ao_carrinho" class="adicionar-carrinho">Adicionar ao
                     Carrinho</button>
             </form>
 
-          
+
 
             <p class="entrega">🚚 Nós entregamos! Basta dizeres quando e como. <a href="shipping.php">Saber Mais</a></p>
             <form method="post" action="detalhes_produto.php?id=<?php echo $produto['id']; ?>">
@@ -213,30 +218,28 @@ if (isset($_SESSION['favoritos']) && count($_SESSION['favoritos']) > 0) {
 
     <script>
         document.querySelectorAll(".miniatura").forEach(img => {
-            img.addEventListener("click", function () {
+            img.addEventListener("click", function() {
                 document.getElementById("imagemPrincipal").src = this.src;
             });
         });
 
         document.querySelectorAll(".estrela").forEach((estrela, index) => {
-            estrela.addEventListener("click", function () {
+            estrela.addEventListener("click", function() {
                 document.querySelectorAll(".estrela").forEach((e, i) => {
                     e.innerHTML = i <= index ? "★" : "☆";
                 });
             });
         });
 
-        document.getElementById("addFavoritos").addEventListener("click", function () {
-            alert("Produto adicionado aos favoritos!");
-        });
-
-        function selecionarTamanho(element) {
+        function selecionarTamanho(element, value) {
             document.querySelectorAll(".tamanho").forEach(btn => {
                 btn.classList.remove("selected");
             });
             element.classList.add("selected");
+            document.getElementById("form_tamanho").value = value;
         }
 
+        selecionarTamanho(document.querySelector(".tamanhos").firstElementChild, "XS");
     </script>
 
     <script>
@@ -251,9 +254,7 @@ if (isset($_SESSION['favoritos']) && count($_SESSION['favoritos']) > 0) {
                 imagemPrincipal.style.display = "block";
 
                 videoPrincipal.style.display = "none";
-            }
-
-            else {
+            } else {
                 videoPrincipal.src = element.src;
                 videoPrincipal.style.display = "block";
                 videoPrincipal.play();
